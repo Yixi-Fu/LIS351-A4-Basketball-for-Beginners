@@ -1,0 +1,408 @@
+/* styles.css
+   LIS 351 A4: Styling Your One-Page Website
+   Completed TODO blocks A-O.
+*/
+
+/* ===== Base styles (mostly done) ===== */
+* { box-sizing: border-box; }
+
+:root {
+  --turquoise: #59C3C3;
+  --sky: #B9DDE7;
+  --orange: #E8752A;
+  --charcoal: #263238;
+  --muted: #607078;
+  --paper: #ffffff;
+  --soft: #f4f8f9;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--charcoal);
+  background: var(--paper);
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #e8eef0;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  /* TODO A (Flexbox) */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.brand .dot {
+  /* TODO B (Color) */
+  color: #59C3C3;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.site-nav a {
+  margin-left: 18px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #44545b;
+  font-weight: 700;
+}
+
+.site-nav a:hover { color: #237d82; }
+
+/* ===== Hero ===== */
+.hero {
+  /* TODO C (Background image hero) */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.82)),
+    url("images/basketball-hero.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  border-bottom: 6px solid var(--orange);
+}
+
+.hero-content {
+  /* TODO D (Center content) */
+  text-align: center;
+  padding: 88px 0;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #2a7d81;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  /* TODO E (Typography) */
+  font-size: clamp(42px, 7vw, 58px);
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+}
+
+.hero-subhead {
+  margin: 10px auto 24px;
+  /* TODO F (Typography) */
+  font-size: 22px;
+  color: #53656d;
+  max-width: 690px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-dark {
+  /* TODO G (Button styling) */
+  background: var(--charcoal);
+  color: #fff;
+  border: 2px solid var(--charcoal);
+}
+
+.btn-dark:hover {
+  background: #11191d;
+}
+
+.btn-outline {
+  /* TODO H (Button styling) */
+  border: 2px solid #2f8f94;
+  color: #216f73;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #eaf7f7;
+}
+
+/* ===== Features (3 columns) ===== */
+.features {
+  padding: 52px 0;
+}
+
+.features-grid {
+  /* TODO I (Layout) */
+  display: flex;
+  gap: 26px;
+  margin-top: 30px;
+}
+
+.feature {
+  /* TODO J (Sizing / alignment) */
+  flex: 1;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+.feature h3 {
+  margin: 6px 0 8px;
+  color: var(--charcoal);
+}
+
+.feature p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--turquoise);
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: var(--orange);
+  background: #f8ffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ===== Featured content ===== */
+.featured {
+  padding: 52px 0;
+  background: var(--soft);
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-lede {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 24px;
+  color: #62737b;
+  font-size: 14px;
+}
+
+.practice-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.media {
+  background: #eaeaea;
+  border: 1px solid #d8e0e3;
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center 28%;
+  display: block;
+}
+
+.practice-copy {
+  background: #fff;
+  border-left: 5px solid var(--orange);
+  padding: 24px 26px;
+}
+
+.practice-copy h3 { margin-top: 0; }
+.practice-copy ol { padding-left: 22px; margin-bottom: 0; }
+.practice-copy li { margin-bottom: 10px; }
+
+/* ===== Secondary content (2 cards) ===== */
+.secondary {
+  padding: 44px 0;
+}
+
+.secondary-grid {
+  /* TODO K (Layout) */
+  display: flex;
+  gap: 26px;
+}
+
+.card {
+  /* TODO L (Card styling) */
+  flex: 1;
+  border: 1px solid #dfe8eb;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(38,50,56,0.06);
+}
+
+.card-text {
+  padding: 20px;
+}
+
+.card-text h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-text p {
+  margin: 0 0 16px;
+  color: #65767d;
+  font-size: 13px;
+}
+
+.card-image {
+  min-height: 190px;
+  /* TODO M (Image block) */
+  background-size: cover;
+  background-position: center;
+}
+
+.img-a {
+  background-image: url("images/basketball-hero.png");
+}
+.img-b {
+  background-image: url("images/basketball-practice.png");
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: linear-gradient(135deg, #eaf7f7, #f8fcfd);
+  padding: 52px 0;
+  border-top: 1px solid #dceced;
+}
+
+.cta-inner {
+  /* TODO N (Center CTA) */
+  text-align: center;
+}
+
+.cta-inner h2 { margin: 0 0 8px; }
+.cta-inner p {
+  max-width: 680px;
+  margin: 0 auto 20px;
+  color: #607078;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #fafcfc;
+  border-top: 1px solid #e4ecef;
+  padding: 28px 0;
+}
+
+.footer-inner {
+  /* TODO O (Footer layout) */
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left {
+  max-width: 360px;
+  color: #677980;
+  font-size: 12px;
+}
+
+.footer-left p { margin: 6px 0 0; }
+.footer-left a { color: #3a88a8; }
+
+.footer-cols {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-col h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 12px;
+  color: #66777e;
+  margin: 6px 0;
+}
+
+/* Responsive layout: keeps the page readable when the browser is resized. */
+@media (max-width: 760px) {
+  .header-inner,
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav a {
+    margin: 8px 14px 8px 0;
+  }
+
+  .features-grid,
+  .secondary-grid {
+    flex-direction: column;
+  }
+
+  .practice-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    min-height: 220px;
+  }
+}
