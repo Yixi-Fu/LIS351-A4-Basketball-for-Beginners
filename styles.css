@@ -84,7 +84,7 @@ a:hover { text-decoration: underline; }
   /* TODO C (Background image hero) */
   background-image:
     linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.82)),
-    url("images/basketball-hero.png");
+    url("images/Art.jpeg");
   background-size: cover;
   background-position: center;
   min-height: 420px;
